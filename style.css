@@ -1,0 +1,759 @@
+/** { border: 0.1px solid black; } */
+* { box-sizing:border-box; }
+
+/* Just line for the outside of the head */
+
+body {
+    background-color: #6dd3e7;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 600px;
+    width: 600px;
+    border: 0.2em black solid;
+}
+
+/* CLOUDS */
+
+.cloudborder {
+    position: absolute;
+    height: 155px;
+    width: 600px;
+        /* border-color: rgba(0,0,0,.3);
+        border-width: 2px;
+        border-style: solid;
+        background: -webkit-linear-gradient(#4A4A4A, #738185, #B3DAE6, white);
+        background: -moz-linear-gradient(#4A4A4A, #738185, #B3DAE6, white);
+        background: linear-gradient(#4A4A4A, #738185, #B3DAE6, white);
+        z-index: -4;*/
+}
+
+.cloud {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    border-radius: 1em;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.5);
+    display: inline-block;
+    height: 1.5em;
+    right: 101%;
+    position: absolute;
+    top: 50%;
+    width: 3.5em;
+    -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+    animation: moveCloud1 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 30s;
+}
+.cloud:after,
+.cloud:before {
+    background-color: #fff;
+    content: '';
+    border-radius: 100%;
+    position: absolute;
+}
+.cloud:after {
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.025));
+    height: 1.5em;
+    right: .4em;
+    top: -.8em;
+    width: 1.5em;
+}
+.cloud:before {
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.075));
+    height: 2.1em;
+    left: .4em;
+    top: -.99em;
+    width: 2.1em;
+}
+
+.cloud2 {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    border-radius: 1em;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.5);
+    display: inline-block;
+    height: 1.5em;
+    right: 103%;
+    position: absolute;
+    top: 35%;
+    width: 3.5em;
+    -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+    animation: moveCloud2 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+.cloud2:after,
+.cloud2:before {
+    background-color: #fff;
+    content: '';
+    border-radius: 100%;
+    position: absolute;
+}
+.cloud2:after {
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.025));
+    height: 1.5em;
+    right: .4em;
+    top: -.8em;
+    width: 1.5em;
+}
+.cloud2:before {
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.075));
+    height: 2.1em;
+    left: .4em;
+    top: -.99em;
+    width: 2.1em;
+}
+
+.cloud3 {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    border-radius: 1em;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.5);
+    display: inline-block;
+    height: 2em;
+    right: 110%;
+    position: absolute;
+    top: 70%;
+    width: 4em;
+    -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+    animation: moveCloud3 53s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+}
+.cloud3:after,
+.cloud3:before {
+    background-color: #fff;
+    content: '';
+    border-radius: 100%;
+    position: absolute;
+}
+.cloud3:after {
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.025));
+    height: 2em;
+    right: .4em;
+    top: -.8em;
+    width: 2em;
+}
+.cloud3:before {
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.075));
+    height: 3.1em;
+    left: .4em;
+    top: -.99em;
+    width: 3.1em;
+}
+
+.cloud4 {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    border-radius: 1em;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.5);
+    display: inline-block;
+    height: 1.5em;
+    right: 130%;
+    position: absolute;
+    top: 25%;
+    width: 3.5em;
+    -webkit-filter: drop-shadow(0 2px 3px hsla(0,0%,0%,.25));
+    animation: moveCloud4 65s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 8s;
+}
+.cloud4:after,
+.cloud4:before {
+    background-color: #fff;
+    content: '';
+    border-radius: 100%;
+    position: absolute;
+}
+.cloud4:after {
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.025));
+    height: 1.5em;
+    right: .4em;
+    top: -.8em;
+    width: 1.5em;
+}
+.cloud4:before {
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.075));
+    height: 2.1em;
+    left: .4em;
+    top: -.99em;
+    width: 2.1em;
+}
+
+
+@keyframes moveCloud1 {
+  to {
+    transform: translateX(600px);
+  }
+}
+@keyframes moveCloud2 {
+  to {
+    transform: translateX(600px);
+  }
+}
+@keyframes moveCloud3 {
+  to {
+    transform: translateX(600px);
+  }
+}
+@keyframes moveCloud4 {
+    to {
+      transform: translateX(600px);
+    }
+  }
+@media screen and (max-width: 1400px) {
+  @keyframes moveCloud1 {
+    to {
+      transform: translateX(680px);
+    }
+  }
+  @keyframes moveCloud2 {
+    to {
+      transform: translateX(700px);
+    }
+  }
+  @keyframes moveCloud3 {
+    to {
+      transform: translateX(800px);
+    }
+  }
+  @keyframes moveCloud4 {
+    to {
+      transform: translateX(800px);
+    }
+  }
+}
+@keyframes rainCloud1 {
+  to {
+    transform: translateY(960px);
+  }
+}
+@keyframes lightning {
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+}
+@keyframes moveLightning {
+  to {
+    transform: translateX(200px);
+  }
+}
+
+.snowflake {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow 5s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.snowflake2 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow2 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.snowflake3 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow3 5s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+.snowflake4 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow4 5s ease-in-out infinite;
+  animation-delay: 2.2s;
+}
+.snowflake5 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow5 5s ease-in-out infinite;
+  animation-delay: 2.8s;
+}
+.snowflake6 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow6 5s ease-in-out infinite;
+  animation-delay: 3.4s;
+}
+.snowflake7 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow7 5s ease-in-out infinite;
+  animation-delay: 4s;
+}
+.snowflake8 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow8 5s ease-in-out infinite;
+  animation-delay: 4.6s;
+}
+.snowflake9 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow9 5s ease-in-out infinite;
+  animation-delay: 5.2s;
+}
+.snowflake10 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 2.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnow10 5s ease-in-out infinite;
+  animation-delay: 5.8s;
+}
+
+/*right snow*/
+
+.snowflakem {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm 5s ease-in-out infinite;
+}
+
+.snowflakem2 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm2 5s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+.snowflakem3 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm3 5s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+.snowflakem4 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm4 5s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+.snowflakem5 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm5 5s ease-in-out infinite;
+  animation-delay: 2.4s;
+}
+.snowflakem6 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm6 5s ease-in-out infinite;
+  animation-delay: 3s;
+}
+.snowflakem7 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm7 5s ease-in-out infinite;
+  animation-delay: 3.6s;
+}
+.snowflakem8 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm8 5s ease-in-out infinite;
+  animation-delay: 4.2s;
+}
+.snowflakem9 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm9 5s ease-in-out infinite;
+  animation-delay: 4.8s;
+}
+.snowflakem10 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fallSnowm10 5s ease-in-out infinite;
+  animation-delay: 5.4s;
+}
+
+@keyframes fallSnow {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow2 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow3 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow4 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow5 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow6 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow7 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow8 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow9 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnow10 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+
+@keyframes fallSnowm {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm2 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm3 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm4 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm5 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm6 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm7 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm8 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm9 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+@keyframes fallSnowm10 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(495px);
+    opacity: 1;
+  }
+}
+
+/* GROUND */
+
+.groundborder {
+    position: absolute;
+    border: 0.1em black solid;
+    width: 600px;
+    height: 3em;
+    top: 34.2em;
+    background-color: #5b8731;
+}
+
+/* CHRISTMAS TREE */
+
+.christmas-tree {
+  position: absolute;
+  top: 26em;
+  left: 19em;
+  width: 0;
+  height: 0;
+}
+
+.tree {
+  position: relative;
+}
+
+.layer {
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid green;
+  position: absolute;
+  top: 0;
+}
+
+
+.tree .layer:nth-of-type(1) {
+  transform: translate(-50%);
+  width: 130px;
+  height: 5em;
+}
+.layer:nth-child(2) {
+  transform: translateX(-50%) translateY(-30px);
+}
+
+.tree .layer:nth-of-type(3) {
+  transform: translateX(-50%) translateY(-60px);
+  width: 110px;
+  height: 5em;
+}
+
+.tree .layer:nth-of-type(4) {
+  transform: translateX(-50%) translateY(-120px);
+  width: 90px;
+  height: 5em;
+}
+
+.layer:nth-child(5) {
+  transform: translateX(-50%) translateY(-165px);
+}
+
+.trunk {
+  width: 40px;
+  height: 60px;
+  background-color: brown;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Decorations */
+.decoration {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.decoration1 {
+  top: -6em;
+  left: -2em;
+  transform: translateX(-50%);
+}
+
+.decoration2 {
+  top: -3.1em;
+  left: 1.5em;
+}
+
+.decoration3 {
+  top: 0.5em;
+  left: -3.5em;
+}
+
+/* Star */
+.stara {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid yellow;
+  top: -12em;
+  left: 50%;
+  transform: translateX(-50%);
+}
